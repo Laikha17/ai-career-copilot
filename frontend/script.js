@@ -1,6 +1,5 @@
 // API Configuration
 const API_URL = 'https://ai-career-copilot-1pf1.onrender.com/career-copilot';
-
 // DOM Elements
 const submitBtn = document.getElementById('submitBtn');
 const btnText = document.getElementById('btnText');
