@@ -1,5 +1,5 @@
 // API Configuration
-const API_URL = 'http://127.0.0.1:8000/career-copilot';
+const API_URL = 'https://ai-career-copilot-1pf1.onrender.com/career-copilot';
 
 // DOM Elements
 const submitBtn = document.getElementById('submitBtn');
