@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Copilot - Personalized Career Guidance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+            </div>
+            <h1 class="header-title">AI Career Copilot</h1>
+            <p class="header-subtitle">Personalized career guidance powered by AI</p>
+        </header>
+
+        <!-- Main Card -->
+        <div class="card">
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="branch">Branch / Stream</label>
+                    <input 
+                        type="text" 
+                        id="branch" 
+                        placeholder="e.g., Computer Science"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="year">Year of Study</label>
+                    <input 
+                        type="number" 
+                        id="year" 
+                        placeholder="e.g., 3"
+                        min="1"
+                        max="5"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="skills">Technical Skills</label>
+                    <textarea 
+                        id="skills" 
+                        rows="3"
+                        placeholder="e.g., Python, JavaScript, React, Machine Learning"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="interests">Career Interests</label>
+                    <textarea 
+                        id="interests" 
+                        rows="3"
+                        placeholder="e.g., AI/ML, Web Development, Data Science"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="strengths">Key Strengths</label>
+                    <textarea 
+                        id="strengths" 
+                        rows="3"
+                        placeholder="e.g., Problem-solving, Team collaboration, Quick learner"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="weaknesses">Areas for Improvement</label>
+                    <textarea 
+                        id="weaknesses" 
+                        rows="3"
+                        placeholder="e.g., Public speaking, Time management, Advanced algorithms"
+                        required
+                    ></textarea>
+                </div>
+
+                <button class="btn-primary" id="submitBtn" onclick="handleSubmit()">
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span id="btnText">Generate Career Guidance</span>
+                </button>
+            </div>
+
+            <!-- Error State -->
+            <div class="alert alert-error" id="errorAlert" style="display: none;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <div>
+                    <h3>Error</h3>
+                    <p id="errorMessage"></p>
+                </div>
+            </div>
+
+            <!-- Result Section -->
+            <div class="result-section" id="resultSection" style="display: none;">
+                <div class="result-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <h2>Your Career Guidance</h2>
+                </div>
+                
+                <div class="result-content">
+                    <div class="result-badge" id="generatedBy"></div>
+                    <div class="result-text" id="resultText"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by Gemini AI • Built for Indian Engineering Students</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
