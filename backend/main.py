@@ -50,12 +50,16 @@ Skill Gaps:
 - <gap 2>
 - <gap 3>
 
-3-Month Roadmap:
-Month 1:
-Month 2:
-Month 3:
+Learning Path (Simple & Clear):
+Phase 1 – Foundation (Weeks 1–4):
+Phase 2 – Hands-on Practice (Weeks 5–8):
+Phase 3 – Job Ready (Weeks 9–12):
+
 
 Keep it concise and beginner-friendly.
+Make the roadmap easy to understand for a beginner.
+Avoid too many tools or technical jargon.
+Focus on clarity over completeness.
 """
         result = generate_career_response(prompt)
         return {
